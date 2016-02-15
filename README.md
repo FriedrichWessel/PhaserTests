@@ -7,3 +7,8 @@ The folder node_modules that will be created by step 2 is necesarry - add it to 
 4. Install path module ( npm install --save-dev path ) - so you can start your webserver in any subfolder
 ( http://stackoverflow.com/questions/22187493/how-to-refer-to-root-in-connect-server )
 
+5. Skeleton from Surma can be found here : https://github.com/surma/webapp-skeleton/blob/master/package.json
+
+Tutorial for Stage Handling in Phaser:
+http://phaser.io/news/2015/10/state-management-tutorial
+
