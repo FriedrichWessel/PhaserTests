@@ -25,9 +25,11 @@
     "exorcist": "^0.4.0",
     "vinyl-source-stream": "^1.1.0",
     "yargs": "^3.16.1",
-    "browser-sync": "^2.8.0"
+    "browser-sync": "^2.8.0",
+    "needlepoint": "^1.0.5"
   },
   "dependencies": {
+    "needlepoint": "^1.0.5",
     "phaser": "^2.4.1"
   },
   "config": {
