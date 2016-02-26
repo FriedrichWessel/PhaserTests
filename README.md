@@ -15,3 +15,7 @@ http://phaser.io/news/2015/10/state-management-tutorial
 Tutorial on how to debug ES6: https://github.com/stefanwalther/es6-debug-webstorm
 
 ECS in phaser : http://www.paolodistefano.com/2014/12/27/ecs/
+
+Maybe a good DI for JS6 : https://www.andrewmunsell.com/blog/dependency-injection-for-modern-javascript-using-es6-classes-and-es7-decorators/
+JS 6 Tutorials: https://www.andrewmunsell.com/lesson/arrow-functions/
+JS 6 Modules : http://www.2ality.com/2014/09/es6-modules-final.html
