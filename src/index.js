@@ -1,15 +1,8 @@
-import GameState from 'states/GameState';
-import {singleton} from 'needlepoint';
+//import Game from 'Game.js';
+//import SystemLoader from 'SystemLoader.js'
+import {container} from 'needlepoint';
+import {Test2} from 'Test2';
 
-@singleton
-export default class Game extends Phaser.Game {
-
-	constructor() {
-		super(950, 500, Phaser.AUTO, 'content', null);
-		this.state.add('GameState', GameState, false);
-		this.state.start('GameState');
-	}
-
-}
-
-new Game();
+var test2 = container.resolve(Test2);
+//var systemLoader = container.resolve(SystemLoader);
+//systemLoader.startGame();
