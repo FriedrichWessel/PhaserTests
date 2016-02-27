@@ -11,6 +11,7 @@ var exorcist = require('exorcist');
 var babelify = require('babelify');
 var browserify = require('browserify');
 var browserSync = require('browser-sync');
+var babelify = require("babelify");
 
 /**
  * Using different folders/file names? Change these constants:
@@ -20,6 +21,8 @@ var BUILD_PATH = './build';
 var SCRIPTS_PATH = BUILD_PATH + '/scripts';
 var SOURCE_PATH = './src';
 var STATIC_PATH = './static';
+var ASSET_PATH = './assets';
+var TARGET_ASSETPATH = BUILD_PATH + '/assets';
 var ENTRY_FILE = SOURCE_PATH + '/index.js';
 var OUTPUT_FILE = 'game.js';
 
@@ -64,6 +67,7 @@ function cleanBuild() {
  * Check out README.md for more info on the '/static' folder.
  */
 function copyStatic() {
+    gulp.src(ASSET_PATH+'/**/*').pipe(gulp.dest(TARGET_ASSETPATH));
     return gulp.src(STATIC_PATH + '/**/*')
         .pipe(gulp.dest(BUILD_PATH));
 }
@@ -108,7 +112,7 @@ function build() {
         entries: ENTRY_FILE,
         debug: true
     })
-    .transform(babelify)
+    .transform(babelify.configure({presets: ["stage-0","es2015"]}))
     .bundle().on('error', function(error){
           gutil.log(gutil.colors.red('[Build Error]', error.message));
           this.emit('end');

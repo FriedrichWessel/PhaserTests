@@ -1,13 +1,18 @@
-import RainbowText from 'objects/RainbowText';
+import InitialState from 'states/InitialState.js';
+import {dependencies, singleton} from 'needlepoint';
 
+@dependencies(Game)
 class GameState extends Phaser.State {
 
+	preload(){
+		//this.game.load.script('Initial', 'states/InitialState.js');
+	}
 	create() {
-		let center = { x: this.game.world.centerX, y: this.game.world.centerY }
-		let text = new RainbowText(this.game, center.x, center.y, "- phaser -\nwith a sprinkle of\nES6 dust!");
-		text.anchor.set(0.5);
+		let center = { x: this.game.world.centerX, y: this.game.world.centerY };
+
+		this.game.state.add('Initial', InitialState);
+		this.game.state.start('Initial');
 	}
 
 }
-
 export default GameState;
