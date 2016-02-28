@@ -1,6 +1,6 @@
 import InitialState from 'states/InitialState.js';
-import {Game} from 'Game.js';
-
+import Game from 'Game.js';
+import {dependencies} from 'needlepoint';
 
 @dependencies(Game)
 export default class SystemLoader {

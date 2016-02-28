@@ -112,7 +112,12 @@ function build() {
         entries: ENTRY_FILE,
         debug: true
     })
-    .transform(babelify.configure({presets: ["stage-0","es2015"]}))
+    .transform(babelify.configure(
+        {
+            presets: ["stage-0","es2015"],
+            plugins: ["babel-plugin-transform-decorators-legacy"]
+        }
+    ))
     .bundle().on('error', function(error){
           gutil.log(gutil.colors.red('[Build Error]', error.message));
           this.emit('end');

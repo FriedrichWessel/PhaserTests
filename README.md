@@ -19,3 +19,19 @@ ECS in phaser : http://www.paolodistefano.com/2014/12/27/ecs/
 Maybe a good DI for JS6 : https://www.andrewmunsell.com/blog/dependency-injection-for-modern-javascript-using-es6-classes-and-es7-decorators/
 JS 6 Tutorials: https://www.andrewmunsell.com/lesson/arrow-functions/
 JS 6 Modules : http://www.2ality.com/2014/09/es6-modules-final.html
+
+Phaser Inspector: 
+http://phaser.io/news/2015/09/phaser-inspector-plugin
+
+### Ex- and Import Packages 
+export Package class Package{}
+import {Package} from 'PackageFile.js'
+
+export default class Package
+import Package 'from PackageFile.js'
+
+class A{}
+class B{}
+export A;
+export B;
+export default A;
